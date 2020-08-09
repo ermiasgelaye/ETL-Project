@@ -11,17 +11,25 @@ We are going to use 2 different datasets from the public data platform Data Worl
 ### Finding Data/Data Source
 All of our data is sourced from the year 2017 up to 2019. 
 
-* INC 5000
+* INC 5000 America
   - [Data World Inc 5000,2019](https://data.world/aurielle/inc-5000-2019/workspace/file?filename=inc5000-2019.csv)
   - [Data World Inc 5000,2018](https://data.world/aurielle/inc-5000-2018/workspace/file?filename=inc5000-2018.csv)
   - [Data World Inc 5000,2017](https://data.world/aurielle/inc-5000-2017/workspace/file?filename=inc5000-2017-091317.csv)
  
-* Forbs 2000
+* Forbs 2000 Global
   - [Data World Forbes Global 2000,2019](https://data.world/aroissues/forbes-global-2000-2008-2019/workspace/file?filename=Forbes+Global+2000+-+2019.csv)
   - [Data World Forbes Global 2000,2018](https://data.world/aroissues/forbes-global-2000-2008-2019/workspace/file?filename=Forbes+Global+2000+-+2018.csv)
   - [Data World Forbes Global 2000,2017](https://data.world/aroissues/forbes-global-2000-2008-2019/workspace/file?filename=Forbes+Global+2000+-+2017.csv)
- 
+  
+
 ### Data Cleanup & Analysis
+
+Type of transformations needed (cleaning, joining, filtering, aggregating: etc). Several columns will not be needed and will be removed. Duplicate rows will be removed, and need to be managed. Some aggregation will also be done to find totals for comparison business in the dataset.
+
+Type of final production database data will load into: Will use a relational database to link the data by our common identifiers.
+
+Final tables/collections that will be used in the production database: New final table with found/calculated values by metrics.
+
 ### Project Report
 
 
