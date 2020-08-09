@@ -1,6 +1,6 @@
 # ETL-Project
 
-## Unveil America’s Vs. Global Top Fastest - Growing Private Companies in the year 2017, 2018, 2019
+## Unveil the Top Fastest-Growing Private Companies in America Vs. Global in the year 2017, 2018, 2019
                           
 
 
