@@ -1,8 +1,8 @@
 # ETL-Project
-# Project Proposal
-# Finding Data
-# Data Cleanup & Analysis
-# Project Report
+### Project Proposal
+### Finding Data
+### Data Cleanup & Analysis
+### Project Report
 
 
 
