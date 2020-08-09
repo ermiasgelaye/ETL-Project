@@ -26,8 +26,8 @@ All of our data is sourced from the year 2017 up to 2019.
 
 #### Transformation
 
-- We will gone use Pandas functions in Jupyter Notebook to transform all three CSV files.
-- Reviewed the files and transformed into data frames
+- We will gone use Pandas functions in Jupyter Notebook to transform all CSV files.
+- Reviewe the files and transformed into data frames
 - Type of transformations needed (cleaning, joining, filtering, aggregating: etc). Several columns will not be needed and will be removed. 
 - Duplicate rows will be removed, and need to be managed. 
 - Some aggregation will also be done to find totals for comparison business in the dataset.
