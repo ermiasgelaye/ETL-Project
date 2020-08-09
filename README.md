@@ -2,7 +2,7 @@
 
 ## Unveil the Top Fastest-Growing Private Companies in America Vs. Global in the year 2017, 2018, 2019
                           
-![mission_to_mars](Images/combine_images (1).jpg)  
+![ETL_project](Images/combine_images.jpg)  
 
 ### Project Proposal
 We are going to use 2 different datasets from the public data platform data.world which leads us to extract the fastest-growing private companies in America, and the Glob sourced from Inc 5000, and Forbes Global 2000. 
