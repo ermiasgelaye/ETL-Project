@@ -10,8 +10,17 @@ We are going to use 2 different datasets from the public data platform Data Worl
 
 ### Finding Data/Data Source
 All of our data is sourced from the year 2017 up to 2019. 
-INC 5000
-Forbs 2000
+
+* INC 5000
+ - [Data World Inc 5000,2019](https://data.world/aurielle/inc-5000-2019/workspace/file?filename=inc5000-2019.csv)
+ - [Data World Inc 5000,2018](https://data.world/aurielle/inc-5000-2018/workspace/file?filename=inc5000-2018.csv)
+ - [Data World Inc 5000,2017](https://data.world/aurielle/inc-5000-2017/workspace/file?filename=inc5000-2017-091317.csv)
+ 
+* Forbs 2000
+ - [Forbes Global 2000,2019](https://data.world/aroissues/forbes-global-2000-2008-2019/workspace/file?filename=Forbes+Global+2000+-+2019.csv)
+ - [Forbes Global 2000,2018](https://data.world/aroissues/forbes-global-2000-2008-2019/workspace/file?filename=Forbes+Global+2000+-+2018.csv)
+ - [Forbes Global 2000,2017](https://data.world/aroissues/forbes-global-2000-2008-2019/workspace/file?filename=Forbes+Global+2000+-+2017.csv)
+ 
 ### Data Cleanup & Analysis
 ### Project Report
 
