@@ -2,7 +2,7 @@
 
 ## Unveil the Top Fastest-Growing Private Companies in America Vs. Global in the year 2017, 2018, 2019
                           
-![ETL_project](Image/combine_images.jpg)  
+![ETL_project](Image/Inc.5000.png)  
 
 ### Project Proposal
 
