@@ -19,16 +19,14 @@ All of our data is sourced from the year 2007 up to 2019.
 * INC 5000 America
   - [Data World Inc 5000,2019](https://data.world/aurielle/inc-5000-2019/workspace/file?filename=inc5000-2019.csv)
   - [Data World Inc 5000,2018](https://data.world/aurielle/inc-5000-2018/workspace/file?filename=inc5000-2018.csv)
-  - [Data World Inc 5000,2017](https://data.world/aurielle/inc-5000-10-years/workspace/file?filename=inc5000_all10years.csv)
+  - [Data World Inc 5000 (2007-2017](https://data.world/aurielle/inc-5000-10-years/workspace/file?filename=inc5000_all10years.csv)
  
-
-
 ### Data Cleanup & Analysis
 
 #### Transformation
 
 - We will gone use Pandas functions in Jupyter Notebook to transform all CSV files.
-- Reviewe the files and transformed into data frames
+- Reviewe the files and transforme into dataframes
 - Type of transformations needed (cleaning, joining, filtering, aggregating: etc). Several columns will not be needed and will be removed. 
 - Duplicate rows will be removed, and need to be managed. 
 - Some aggregation will also be done to find totals for comparison business in the dataset.
