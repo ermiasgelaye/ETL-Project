@@ -5,6 +5,9 @@
 ![ETL_project](Image/combine_images.jpg)  
 
 ### Project Proposal
+
+This project is designed to conduct a presentation of business information or Business Intelligence by extracting, trasnfroming, and loading the top fastest-growing private companies in America vesrus globally in the year 2017, 2018, 2019.
+
 We are going to use 2 different datasets from the public data platform Data World which leads us to extract the fastest-growing private companies in America, and the Glob sourced from [Inc 5000](https://www.inc.com/inc5000/2019/top-private-companies-2019-inc5000.html), and [Forbes Global 2000](https://www.forbes.com/global2000/#6b08d4d8335d). 
 
 
