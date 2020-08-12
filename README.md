@@ -39,7 +39,14 @@ In this project we are gone extract, trasnfrom and load twelve years (2007-2019)
 - Final tables/collections that will be used in the production database: New final table with found/calculated values by metrics.
 
 ### Project Report
-- Project will be submit in to GitHub
+- Project will be submitted through github.
+
+### Team members
+- Adedamola Atekoja (‘Damola)
+- Amanda Qianyue Ma
+- Amos Johnson
+- Ermias Gaga
+- Maria Lorena
 
 
 
