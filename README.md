@@ -21,7 +21,7 @@ In this project we are gone extract, trasnfrom and load twelve years (2007-2019)
   - [Data World Inc 5000 (2007-2017)](https://data.world/aurielle/inc-5000-10-years/workspace/file?filename=inc5000_all10years.csv)
  
 * Web Scarping 
- - [List of S&P 500 companies](https://en.wikipedia.org/wiki/List_of_S%26P_500_companies)
+  - [List of S&P 500 companies](https://en.wikipedia.org/wiki/List_of_S%26P_500_companies)
  
 ### Data Cleanup & Analysis
 
