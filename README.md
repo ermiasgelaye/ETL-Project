@@ -2,7 +2,7 @@
 
 ## Unveil the Top Fastest Growing Private Companies in America for the last thirteen years (2007 - 2020) 
                           
-![ETL_project](Image/Inc.5000.png)
+![ETL_project](Image/Business-Intelligence.gif)
 
 ### Introduction
 
