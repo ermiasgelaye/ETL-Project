@@ -7,7 +7,10 @@ SELECT * FROM Ranks;
 -- Select all company from film table
 SELECT * FROM Growth;
 
--- Count
+-- Total number of companies
+
+SELECT COUNT(company_name) As "Total Companies"
+FROM Company;
 
 -- Create an alias
 
