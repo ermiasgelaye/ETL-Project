@@ -16,8 +16,8 @@ In this project we extracted, transformed, and loaded thirteen years (2007-2020)
 Our main sources:
 
 - [Inc 5000 from year 2007 till 2019 - Data sourced from Data World Inc](https://www.inc.com/)
-  - [Data World Inc 5000,2019](https://data.world/aurielle/inc-5000-2019/workspace/file?filename=inc5000-2019.csv)
-  - [Data World Inc 5000,2018](https://data.world/aurielle/inc-5000-2018/workspace/file?filename=inc5000-2018.csv)
+  - [Data World Inc 5000, 2019](https://data.world/aurielle/inc-5000-2019/workspace/file?filename=inc5000-2019.csv)
+  - [Data World Inc 5000, 2018](https://data.world/aurielle/inc-5000-2018/workspace/file?filename=inc5000-2018.csv)
   - [Data World Inc 5000 (2007-2017)](https://data.world/aurielle/inc-5000-10-years/workspace/file?filename=inc5000_all10years.csv)
  
 - [Financial times ranking 500 2020 - Data sourced through web scraping](https://www.ft.com/americas-fastest-growing-companies-2020)
