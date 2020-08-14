@@ -28,7 +28,9 @@ Our main sources:
 
 ### Data Enginering 
 
-After extracting the data we conducted a data engineering, and Entity-Relationship Diagram (ERD) by using an open-source toolkit called [Quickdatabasediagrams](https://app.quickdatabasediagrams.com/). The model looks as follows: 
+After extracting the data we conducted a data engineering, and Entity-Relationship Diagram (ERD) by using an open-source toolkit called [Quickdatabasediagrams](https://app.quickdatabasediagrams.com/). 
+
+The model looks as follows: 
 ![ETL_project](Image/ERD_model.png)
 
 ### Data Transformation
