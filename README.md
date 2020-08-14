@@ -4,11 +4,26 @@
                           
 ![ETL_project](Image/Inc.5000.png)
 
-### Project Proposal
+### Introduction
 
-This project is designed to conduct a presentation of business information or Business Intelligence by extracting, transforming and loading the top fastest-growing private companies in America for the last thirteen years(2007-2019).
+This project is designed to conduct a presentation of business information or Business Intelligence by extracting, transforming, and loading the top fastest-growing private companies in America for the last thirteen years(2007-2020).
 
-We are going to use three datasets from the public data platform called Data World which leads us to extract the fastest-growing private companies in America sourced from [Inc 5000](https://www.inc.com/inc5000/2019/top-private-companies-2019-inc5000.html) and scraping Financial Times top 5000 list of America's fastest-growing companies.
+The purpose of this project is to build a database that demonstrates the changes in American top fastest-growing private companies through time. The database is built on by ingesting, combining, and restructuring data from three main sources in to into a conformed one Postgresql database. The three source of our data are [Inc 5000](https://www.inc.com/inc5000/),[Financial times ranking 500 2020](https://www.ft.com/americas-fastest-growing-companies-2020), and [Growjo Company API](https://growjo.com/company_api) for scraping fastest growing companies in 2020.
+
+### Data Enginering 
+
+
+
+
+
+The framework is based around dbt ("Data Build Tool"), open-source toolkit for templating and orchestrating SQL-based data transformations of RAW API-sourced data into structures suitable for analysis, and pre-built transformations and design patterns taken from Rittman Analytics' previous data warehousing consulting experience.
+
+
+
+
+We used three data sources to extract the dat 
+
+
 
 Inc. is an American business magazine founded in 1979 and based in New York City. It publishes eight print issues annually, as well as daily online articles and videos. Inc. is best known for its annual rankings of the fastest-growing privately held companies in the United States called the "Inc. 500" and "Inc. 5000."
 
