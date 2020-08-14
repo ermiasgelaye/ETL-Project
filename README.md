@@ -42,8 +42,177 @@ The model looks as follows:
 
 ### Load
 * For our final production, we used a relational database called Postgresql, in a total of three tables, twelve columns created, and the data loaded successfully. 
-
 - Final tables/collections are stored in the production database
+
+#### Company Table
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>company_name</th>
+      <th>number_of_employees</th>
+      <th>industry</th>
+      <th>city</th>
+      <th>state</th>
+      <th>country</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>20391</td>
+      <td>SwanLeap</td>
+      <td>49.0</td>
+      <td>Logistics &amp; Transportation</td>
+      <td>Madison</td>
+      <td>WI</td>
+      <td>United States</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>16357</td>
+      <td>PopSockets</td>
+      <td>118.0</td>
+      <td>Consumer Products &amp; Services</td>
+      <td>Boulder</td>
+      <td>CO</td>
+      <td>United States</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>9922</td>
+      <td>Home Chef</td>
+      <td>865.0</td>
+      <td>Food &amp; Beverage</td>
+      <td>Chicago</td>
+      <td>IL</td>
+      <td>United States</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>22829</td>
+      <td>Velocity Global</td>
+      <td>55.0</td>
+      <td>Business Products &amp; Services</td>
+      <td>Denver</td>
+      <td>CO</td>
+      <td>United States</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5896</td>
+      <td>DEPCOM Power</td>
+      <td>104.0</td>
+      <td>Energy</td>
+      <td>Scottsdale</td>
+      <td>AZ</td>
+      <td>United States</td>
+    </tr>
+  </tbody>
+</table>
+
+#### Ranks Table 
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>rank</th>
+      <th>rank_year</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>20391</td>
+      <td>1</td>
+      <td>2018</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>16357</td>
+      <td>2</td>
+      <td>2018</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>9922</td>
+      <td>3</td>
+      <td>2018</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>22829</td>
+      <td>4</td>
+      <td>2018</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5896</td>
+      <td>5</td>
+      <td>2018</td>
+    </tr>
+  </tbody>
+</table>
+
+#### Growth Table
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>growth_rate</th>
+      <th>compound_annual_growth_rate</th>
+      <th>total_funding</th>
+      <th>revenue_$</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>20391</td>
+      <td>75660.8425</td>
+      <td>None</td>
+      <td>None</td>
+      <td>99.0 Million</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>16357</td>
+      <td>71423.762</td>
+      <td>None</td>
+      <td>None</td>
+      <td>168.8 Million</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>9922</td>
+      <td>60165.5058</td>
+      <td>None</td>
+      <td>None</td>
+      <td>255.0 Million</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>22829</td>
+      <td>39816.5093</td>
+      <td>None</td>
+      <td>None</td>
+      <td>49.2 Million</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5896</td>
+      <td>38962.9022</td>
+      <td>None</td>
+      <td>None</td>
+      <td>219.6 Million</td>
+    </tr>
+  </tbody>
+</table>
+
 
 ### Team members
 - Adedamola Atekoja (‘Damola)
