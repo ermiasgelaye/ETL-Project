@@ -1,5 +1,6 @@
 -- Select everything from film table
 -- Count
+
 -- Create an alias
 
 -- Group by 
