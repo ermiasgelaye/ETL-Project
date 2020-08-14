@@ -8,7 +8,7 @@
 
 This project is designed to conduct a presentation of business information or Business Intelligence by extracting, transforming, and loading the top fastest-growing private companies in America for the last thirteen years(2007-2020).
 
-The purpose of this project is to build a database that demonstrates the changes in American top fastest-growing private companies through time. The database is built on by ingesting, combining, and restructuring data from three main sources in to into a conformed one Postgresql database. The three source of our data are [Inc 5000](https://www.inc.com/inc5000/),[Financial times ranking 500 2020](https://www.ft.com/americas-fastest-growing-companies-2020), and [Growjo Company API](https://growjo.com/company_api) for scraping fastest growing companies in 2020.
+The purpose of this project is to build a database that demonstrates the changes in American top fastest-growing private companies through time. The database is built on by ingesting, combining, and restructuring data from three main sources in to into a conformed one Postgresql database. The three source of our data are [Inc 5000](https://www.inc.com/inc5000/), [Financial times ranking 500 2020](https://www.ft.com/americas-fastest-growing-companies-2020), and [Growjo Company API](https://growjo.com/company_api) for scraping fastest growing companies in 2020.
 
 ### Data Enginering 
 
