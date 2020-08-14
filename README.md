@@ -29,7 +29,7 @@ Our main sources:
 ### Data Enginering 
 
 After extracting the data we conducted data enginering, and Entity-Relationship Diagram (ERD) by using an open-source toolkit called [Quickdatabasediagrams](https://app.quickdatabasediagrams.com/). The model looks as follows: 
-![ETL_project](Image/https://github.com/ermiasgelaye/ETL-Project/blob/master/Image/ERD_model.png)
+![ETL_project](Image/ERD_model.png)
 
 ### Data Transformation
 * We used a Pandas functions in Jupyter Notebook to transform all CSV files, scraped data, and API request responses. 
