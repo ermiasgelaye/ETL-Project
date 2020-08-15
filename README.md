@@ -8,7 +8,7 @@
 
 This project is designed to conduct a presentation of business information or Business Intelligence by extracting, transforming, and loading the top fastest-growing private companies in America for the last thirteen years (2007-2020).
 
-The purpose of this project was to build a database that demonstrates the changes in American top fastest-growing private companies through time. The database is built on by ingesting, combining, and restructuring data from three main sources into a conformed one Postgresql database. The three sources of our data are [Inc 5000](https://www.inc.com/inc5000/), [Financial times ranking 500 2020](https://www.ft.com/americas-fastest-growing-companies-2020), and [Growjo Company API](https://growjo.com/company_api) for scraping fastest-growing companies in 2020.
+The purpose of this project was to build a database that demonstrates the changes in American top fastest-growing private companies through time. The database is built on by ingesting, combining, and restructuring data from three main data sources into a conformed one Postgresql database. The three sources of our data are [Inc 5000](https://www.inc.com/inc5000/), [Financial times ranking 500 2020](https://www.ft.com/americas-fastest-growing-companies-2020), and [Growjo Company API](https://growjo.com/company_api) for scraping fastest-growing companies in 2020.
 
 ### Data Extraction 
 In this project we extracted, transformed, and loaded thirteen years (2007-2020) American top fastest-growing private companies. 
@@ -24,7 +24,7 @@ Our main sources:
   - [FT ranking 500 2020](https://www.ft.com/americas-fastest-growing-companies-2020)
   
 - [Growjo Company list - Data sourced through API request](https://growjo.com/company_api)
-  - We make an API call on the Growjo website and generated the company's information based on domains. For this reason, we prepared a python file called [company_domain.py](company_domain.py) that lists American top fastest-growing private companies domain, and we requested information for each domain and stored information in a data frame. For example, you could retrieve a company’s name, location, employee, estimated revenue, and job openings from their domain name. 
+ - We make an API call on the Growjo website and generated the company's information based on domains. For this reason, we prepared a python file called [company_domain.py](company_domain.py) that lists American top fastest-growing private companies domain, and we requested information for each domain and stored information in a data frame. For example, you could retrieve a company’s name, location, employee, estimated revenue, and job openings from their domain name. 
 
 ### Data Enginering 
 
@@ -41,7 +41,7 @@ The model looks as follows:
 * We conducted some aggregation to find totals for comparison in the datasets.
 
 ### Load
-* For our final production, we used a relational database called Postgresql, in a total of three tables, twelve columns created, and the data loaded successfully. 
+* For our final production, we used a relational database called Postgresql, in a total of three tables, twelve columns created, and the data loaded successfully. A flask app is also created for any one to get access the data. 
 - Final tables/collections are stored in the production database
 
 #### Company Table
@@ -174,13 +174,10 @@ The model looks as follows:
 </table>
 
 #### Aggrigate plot on High growth American private company enteries
-
-
 ![ETL_project](Image/Aggrigate_plot.png)
 
-
-### Deploy in to flask
-
+### Deploy in to flask app
+![Flask_app](Image/flask_app.png)
 
 ### Team members
 - Adedamola Atekoja (‘Damola)
