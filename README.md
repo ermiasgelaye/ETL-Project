@@ -1,6 +1,6 @@
 # ETL-Project
 
-## Unveil the Top Fastest Growing Private Companies in America for the last thirteen years (2007 - 2020) 
+## Unveil the Top Fastest Growing Private Companies in America for the Last Thirteen Years (2007 - 2020) 
                           
 ![ETL_project](Image/download.jpeg)
 
