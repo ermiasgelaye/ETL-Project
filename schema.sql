@@ -11,6 +11,7 @@ CREATE TABLE Company (
     City VARCHAR,
     State VARCHAR   NOT NULL,
     Country VARCHAR,
+	founding_year INTEGER,
     CONSTRAINT pk_Company PRIMARY KEY (
         ID
      )
