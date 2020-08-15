@@ -42,4 +42,3 @@ REFERENCES Company (ID);
 SELECT * FROM Company;
 SELECT * FROM Ranks;	
 SELECT * FROM Growth;	
-

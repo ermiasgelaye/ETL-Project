@@ -11,10 +11,14 @@ SELECT * FROM Growth;
 SELECT COUNT(company_name) As "Total Companies"
 FROM Company;
 
--- Total number of companies
-SELECT AVG(revenue_$) AS "Average revenue_$"
+-- Max revenue 
+SELECT Max("revenue_$") AS "Maximum recorded revenue"
 FROM growth;
 
+
+-- Max revenue 
+SELECT AVG("revenue_$")
+FROM growth;
 
 -- Top industries the companies sourced
 SELECT industry, COUNT(company_name) As "Companies Count"
@@ -37,30 +41,10 @@ GROUP BY city
 ORDER BY "Companies Count" DESC
 LIMIT 10;
 
--- Companies group by number of employees
-SELECT industry, COUNT(company_name) As "Companies Count"
+-- Companies group by employee size 
+SELECT company_name, number_of_employees
 FROM Company
-GROUP BY industry
-ORDER BY "Companies Count" DESC
+ORDER BY number_of_employees DESC
 LIMIT 10;
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
--- Group by 
-
--- Select the average 
--- Find the rows with the minimum
-
--- Find the rows with the maximum 
