@@ -172,6 +172,7 @@ The model looks as follows:
     </tr>
   </tbody>
 </table>
+
 #### High grwoth company enteries by industry
 
 
