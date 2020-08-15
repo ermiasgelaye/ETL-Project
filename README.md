@@ -34,7 +34,7 @@ The model looks as follows:
 
 ### Data Transformation
 * We used a Pandas functions in Jupyter Notebook to transform all CSV files, scraped data, and API request responses. 
-* We reviewed the files and transforme into a dataframes.
+* We reviewed the files and transformed into a dataframes.
 * We used a python transformation functions for data cleaning, joining, filtering, and aggregating.
 * Several columns removed
 * Duplicate rows was removed, and successfully managed. 
