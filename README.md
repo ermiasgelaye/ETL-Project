@@ -156,6 +156,25 @@ The model looks as follows:
   </tbody>
 </table>
 
+### Aggregate 
+#### Total number of companies
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Total Companies</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>24115</td>
+    </tr>
+  </tbody>
+</table>
+#### High grwoth company enteries by industry
+![Industry](Image/industry.png)
+
 ### Team members
 - Adedamola Atekoja (‘Damola)
 - Amanda Qianyue Ma
