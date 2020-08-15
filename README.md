@@ -179,7 +179,7 @@ The model looks as follows:
 ![ETL_project](Image/Aggrigate_plot.png)
 
 
-### Deploy in flask
+### Deploy in to flask
 
 
 ### Team members
