@@ -38,7 +38,7 @@ The model looks as follows:
 * We used a python transformation functions for data cleaning, joining, filtering, and aggregating.
 * Several columns removed
 * Duplicate rows was removed, and successfully managed. 
-* We conducted Some aggregation to find totals for comparison in the datasets.
+* We conducted some aggregation to find totals for comparison in the datasets.
 
 ### Load
 * For our final production, we used a relational database called Postgresql, in a total of three tables, twelve columns created, and the data loaded successfully. 
