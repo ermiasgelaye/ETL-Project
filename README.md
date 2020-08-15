@@ -173,7 +173,10 @@ The model looks as follows:
   </tbody>
 </table>
 #### High grwoth company enteries by industry
-![industry](Image/industry.png)
+
+
+![ETL_project](Image/industry.png)
+
 
 ### Team members
 - Adedamola Atekoja (‘Damola)
