@@ -173,7 +173,7 @@ The model looks as follows:
   </tbody>
 </table>
 
-#### Aggrigate plot on High growth company enteries
+#### Aggrigate plot on High growth American private company enteries
 
 
 ![ETL_project](Image/Aggrigate_plot.png)
