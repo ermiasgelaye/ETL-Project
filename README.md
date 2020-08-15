@@ -179,6 +179,9 @@ The model looks as follows:
 ![ETL_project](Image/Aggrigate_plot.png)
 
 
+### Deploy in flask
+
+
 ### Team members
 - Adedamola Atekoja (‘Damola)
 - Amanda Qianyue Ma
