@@ -173,10 +173,10 @@ The model looks as follows:
   </tbody>
 </table>
 
-#### High grwoth company enteries by industry
+#### Aggrigate plot on High grwoth company enteries
 
 
-![ETL_project](Image/industry.png)
+![ETL_project](Image/Aggrigate_plot.png)
 
 
 ### Team members
