@@ -174,9 +174,16 @@ The model looks as follows:
 </table>
 
 #### Aggrigate plot on High growth American private company enteries
-![ETL_project](Image/Aggrigate_plot.png)
+![aggrigate_image](Image/Aggrigate_plot.png)
 
 ### Deploy in to flask app
+We used Postgresql with Flask templating to create a new HTML page that displays information about our project work.
+
+* We created a root route `/` which serve as a home page
+* We created a route called `/companies` that will displaye the json file for companies list.
+
+Finally, we created a template HTML file called index.html that take companies information, and displayed all of the data in the appropriate HTML elements. 
+
 ![Flask_app](Image/flask_app.png)
 
 ### Team members
