@@ -182,7 +182,7 @@ We used Postgresql with Flask templating to create a new HTML page that displays
 * We created a root route `/` which serve as a home page
 * We created a route called `/companies` that will displaye the json file for companies list.
 
-Finally, we created a template HTML file called index.html that take companies information, and displayed all of the data in the appropriate HTML elements. 
+Finally, we created a template HTML file called index.html that take companies information, and displayed them. 
 
 ![Flask_app](Image/flask_app.png)
 
