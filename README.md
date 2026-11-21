@@ -1,194 +1,88 @@
-# ETL-Project
+# ETL Project: America's Fastest-Growing Private Companies (2007–2020)
 
-## Unveil the Top Fastest Growing Private Companies in America for the Last Thirteen Years (2007 - 2020) 
-                          
-![ETL_project](Image/download.jpeg)
+![Python](https://img.shields.io/badge/Python-3-3776AB?logo=python&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-150458?logo=pandas&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?logo=postgresql&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-000000?logo=flask&logoColor=white)
+![Last commit](https://img.shields.io/github/last-commit/ermiasgelaye/ETL-Project)
 
-### Introduction
+An **Extract-Transform-Load** pipeline that combines three sources (a CSV dataset, web scraping and a REST API) into a single PostgreSQL database of America's fastest-growing private companies over 13 years, and serves it through a Flask API.
 
-This project is designed to conduct a presentation of business information or Business Intelligence by extracting, transforming, and loading the top fastest-growing private companies in America for the last thirteen years (2007-2020).
+![ETL](Image/download.jpeg)
 
-The purpose of this project was to build a database that demonstrates the changes in American top fastest-growing private companies through time. The database is built on by ingesting, combining, and restructuring data from three main data sources into a conformed one Postgresql database, and deploy in to Flask app. The three sources of our data are [Inc 5000](https://www.inc.com/inc5000/), [Financial times ranking 500 2020](https://www.ft.com/americas-fastest-growing-companies-2020), and [Growjo Company API](https://growjo.com/company_api) for scraping fastest-growing companies in 2020.
+## Pipeline
 
-### Data Extraction 
-In this project we extracted, transformed, and loaded thirteen years (2007-2020) American top fastest-growing private companies. 
+| Stage | What happens |
+|---|---|
+| **Extract** | **Inc. 5000** rankings 2007–2019 (CSV, ~60k rows) · **Financial Times** *Americas' Fastest-Growing Companies 2020* (web scraping) · **Growjo** company profiles (REST API, queried by domain) |
+| **Transform** | Pandas: standardize column names, drop unused columns, remove duplicates, join sources on company, and aggregate totals |
+| **Load** | Three normalized PostgreSQL tables: `Company`, `Ranks` and `Growth` |
+| **Serve** | Flask app with a home page and a `/companies` JSON endpoint |
 
-Our main sources:
+The final database holds **24,115 unique companies**.
 
-- [Inc 5000 from year 2007 till 2019 - Data sourced from Data World Inc](https://www.inc.com/)
-  - [Data World Inc 5000, 2019](https://data.world/aurielle/inc-5000-2019/workspace/file?filename=inc5000-2019.csv)
-  - [Data World Inc 5000, 2018](https://data.world/aurielle/inc-5000-2018/workspace/file?filename=inc5000-2018.csv)
-  - [Data World Inc 5000 (2007-2017)](https://data.world/aurielle/inc-5000-10-years/workspace/file?filename=inc5000_all10years.csv)
- 
-- [Financial times ranking 500 2020 - Data sourced through web scraping](https://www.ft.com/americas-fastest-growing-companies-2020)
-  - [FT ranking 500 2020](https://www.ft.com/americas-fastest-growing-companies-2020)
-  
-- [Growjo Company list - Data sourced through API request](https://growjo.com/company_api)
- - We make an API call on the Growjo website and generated the company's information based on domains. For this reason, we prepared a python file called [company_domain.py](company_domain.py) that lists American top fastest-growing private companies domain, and we requested information for each domain and stored information in a data frame. For example, you could retrieve a company’s name, location, employee, estimated revenue, and job openings from their domain name. 
+### Sources
 
-### Data Enginering 
+- **Inc. 5000** via data.world: [2019](https://data.world/aurielle/inc-5000-2019) · [2018](https://data.world/aurielle/inc-5000-2018) · [2007–2017](https://data.world/aurielle/inc-5000-10-years)
+- **Financial Times**: [Americas' Fastest-Growing Companies 2020](https://www.ft.com/americas-fastest-growing-companies-2020)
+- **Growjo**: [Company API](https://growjo.com/company_api). [`company_domain.py`](company_domain.py) lists the company domains that were queried.
 
-After extracting the data we conducted a data engineering, and Entity-Relationship Diagram (ERD) by using an open-source toolkit called [Quickdatabasediagrams](https://app.quickdatabasediagrams.com/). 
-The model looks as follows: 
-![ETL_project](Image/ERD_model.png)
+## Data model
 
-### Data Transformation
-* We used a Pandas functions in Jupyter Notebook to transform all CSV files, scraped data, and API request responses. 
-* We reviewed the files and transformed into a dataframes.
-* We used a python transformation functions for data cleaning, joining, filtering, and aggregating.
-* Several columns removed
-* Duplicate rows was removed, and successfully managed. 
-* We conducted some aggregation to find totals for comparison in the datasets.
+![ERD](Image/ERD_model.png)
 
-### Load
-* For our final production, we used a relational database called Postgresql, in a total of three tables, twelve columns created, and the data loaded successfully. A flask app is also created for any one to get access the data. 
-- Final tables/collections are stored in the production database
+| Table | Key columns |
+|---|---|
+| `Company` | `id` (PK), `company_name`, `number_of_employees`, `industry`, `city`, `state`, `country`, `founding_year` |
+| `Ranks` | `id` (FK → Company), `rank`, `rank_year` |
+| `Growth` | `id` (FK → Company), `growth_rate`, `compound_annual_growth_rate`, `total_funding`, `revenue_$` |
 
-#### Company Table
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>id</th>
-      <th>company_name</th>
-      <th>number_of_employees</th>
-      <th>industry</th>
-      <th>city</th>
-      <th>state</th>
-      <th>country</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>20391</td>
-      <td>SwanLeap</td>
-      <td>49.0</td>
-      <td>Logistics &amp; Transportation</td>
-      <td>Madison</td>
-      <td>WI</td>
-      <td>United States</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>16357</td>
-      <td>PopSockets</td>
-      <td>118.0</td>
-      <td>Consumer Products &amp; Services</td>
-      <td>Boulder</td>
-      <td>CO</td>
-      <td>United States</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>9922</td>
-      <td>Home Chef</td>
-      <td>865.0</td>
-      <td>Food &amp; Beverage</td>
-      <td>Chicago</td>
-      <td>IL</td>
-      <td>United States</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>22829</td>
-      <td>Velocity Global</td>
-      <td>55.0</td>
-      <td>Business Products &amp; Services</td>
-      <td>Denver</td>
-      <td>CO</td>
-      <td>United States</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>5896</td>
-      <td>DEPCOM Power</td>
-      <td>104.0</td>
-      <td>Energy</td>
-      <td>Scottsdale</td>
-      <td>AZ</td>
-      <td>United States</td>
-    </tr>
-  </tbody>
-</table>
+Schema: [`schema.sql`](schema.sql) · Example queries (top industries, states and cities): [`query.sql`](query.sql)
 
-#### Ranks Table 
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>id</th>
-      <th>rank</th>
-      <th>rank_year</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>20391</td>
-      <td>1</td>
-      <td>2018</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>16357</td>
-      <td>2</td>
-      <td>2018</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>9922</td>
-      <td>3</td>
-      <td>2018</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>22829</td>
-      <td>4</td>
-      <td>2018</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>5896</td>
-      <td>5</td>
-      <td>2018</td>
-    </tr>
-  </tbody>
-</table>
+## Results
 
-### Aggregate 
-#### Total number of companies
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Total Companies</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>24115</td>
-    </tr>
-  </tbody>
-</table>
+![Companies per year](Image/Aggrigate_plot.png)
 
-#### Aggrigate plot on High growth American private company enteries
-![aggrigate_image](Image/Aggrigate_plot.png)
+## Flask app
 
-### Deploy in to flask app
-We used Postgresql with Flask templating to create a new HTML page that displays information about our project work.
+| Route | Returns |
+|---|---|
+| `/` | Project home page |
+| `/companies` | Every row of the `Company` table as JSON |
 
-* We created a root route `/` which serve as a home page
-* We created a route called `/companies` that will displaye the json file for companies list.
+![Flask app](Image/flask_app.png)
 
-Finally, we created a template HTML file called index.html that take companies information, and displayed them. 
+## Getting started
 
-![Flask_app](Image/flask_app.png)
+```bash
+git clone https://github.com/ermiasgelaye/ETL-Project.git
+cd ETL-Project
+pip install -r requirements.txt
 
-### Team members
-- Adedamola Atekoja (‘Damola)
-- Amanda Qianyue Ma
-- Amos Johnson
-- Ermias Gaga
-- Maria Lorena
+createdb top-companies_db
+psql -d top-companies_db -f schema.sql
+
+export DATABASE_URL="postgresql+psycopg2://postgres:<password>@localhost:5432/top-companies_db"
+jupyter notebook ETL_data_project.ipynb   # runs extract, transform and load
+
+cd flask_api_app && python app.py         # http://127.0.0.1:5000
+```
+
+Both the notebook and the app read the connection string from `DATABASE_URL`. If your password contains special characters such as `@`, URL-encode them (for example, `@` becomes `%40`).
+
+## Project structure
+
+```
+ETL-Project/
+├── ETL_data_project.ipynb   # full ETL pipeline
+├── company_domain.py        # domains queried from the Growjo API
+├── schema.sql · query.sql   # database schema and analysis queries
+├── Resources/               # Inc. 5000 CSV files
+├── flask_api_app/           # Flask app (app.py, templates/, static/)
+├── requirements.txt
+└── Image/                   # README images
+```
+
+## Team
+
+Adedamola Atekoja ('Damola) · Amanda Qianyue Ma · Amos Johnson · Ermias Gaga · Maria Lorena

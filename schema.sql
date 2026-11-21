@@ -1,4 +1,5 @@
--- Data Engineering
+-- Fastest-growing private companies database (PostgreSQL)
+-- Tables: Company (one row per company), Ranks (yearly ranking), Growth (growth and revenue)
 DROP TABLE IF EXISTS  Company CASCADE;
 DROP TABLE IF EXISTS  Ranks CASCADE;
 DROP TABLE IF EXISTS  Growth CASCADE;
@@ -36,9 +37,3 @@ REFERENCES Company (ID);
 
 ALTER TABLE Growth ADD CONSTRAINT fk_Growth_ID FOREIGN KEY(ID)
 REFERENCES Company (ID);
-
-
--- Viewing the tables 
-SELECT * FROM Company;
-SELECT * FROM Ranks;	
-SELECT * FROM Growth;	

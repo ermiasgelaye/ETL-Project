@@ -1,8 +1,8 @@
 -- Select all list from company table
 SELECT * FROM Company;
--- Select all company from film table
+-- Select all rows from the ranks table
 SELECT * FROM Ranks;
--- Select all company from film table
+-- Select all rows from the growth table
 SELECT * FROM Growth;
 
 -- Total number of companies

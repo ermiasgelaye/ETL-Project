@@ -1,0 +1,11 @@
+flask>=3.0
+pandas>=2.0
+sqlalchemy>=2.0
+psycopg2-binary>=2.9
+
+# For ETL_data_project.ipynb
+requests
+beautifulsoup4
+lxml
+matplotlib
+jupyter

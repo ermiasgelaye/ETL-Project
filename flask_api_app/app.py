@@ -1,27 +1,33 @@
-from flask import Flask, jsonify, render_template
+"""Flask app serving the Inc. 5000 / FT 500 fastest-growing companies database.
+
+Configure the database with the DATABASE_URL environment variable, e.g.
+    export DATABASE_URL="postgresql+psycopg2://postgres:<password>@localhost:5432/top-companies_db"
+"""
+import os
+
 import pandas as pd
-import json
+from flask import Flask, Response, render_template
 from sqlalchemy import create_engine
-import numpy as np 
 
-app = Flask(__name__,static_folder='static')
+DATABASE_URL = os.environ.get(
+    "DATABASE_URL", "postgresql+psycopg2://postgres@localhost:5432/top-companies_db"
+)
 
-engine = create_engine('postgresql+psycopg2://postgres:216724401@2@localhost:5432/top-companies_db')
-connection = engine.connect()
+app = Flask(__name__, static_folder="static")
+engine = create_engine(DATABASE_URL)
 
-conn =engine.connect()
 
-@app.route('/')
+@app.route("/")
 def home():
-    return render_template('index.html')
-@app.route('/companies')
+    return render_template("index.html")
+
+
+@app.route("/companies")
 def get_companies():
-    all_companies = pd.read_sql_query('SELECT * FROM Company', con=engine)
-    all_companies=all_companies.to_json(orient = "records")
-    result = json.loads(all_companies)
-    return jsonify(result)
+    """Return every row of the Company table as a JSON array."""
+    companies = pd.read_sql_query("SELECT * FROM company", con=engine)
+    return Response(companies.to_json(orient="records"), mimetype="application/json")
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
-    
+    app.run(debug=os.environ.get("FLASK_DEBUG") == "1")
